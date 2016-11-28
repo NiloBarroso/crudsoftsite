@@ -12,10 +12,23 @@ import totalcross.sys.Convert;
 import totalcross.sys.Settings;
 import br.com.softsite.domain.Cliente;
 
+
+/**
+ * ClienteDaoImpl.java
+ * 
+ * Classe de acesso ao banco de dados para entidade Cliente.
+ * @author Nilo Jorge Andrade Barroso.
+ *
+ */
 public class ClienteDaoImpl implements ClienteDao {
 
 	private Connection dbcon;
 	
+	
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#criaTabelas()
+	 */
 	@Override
 	public void criaTabelas() throws SQLException{
 		String sql = "";
@@ -28,6 +41,10 @@ public class ClienteDaoImpl implements ClienteDao {
 		st.close();
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#inclui(br.com.softsite.domain.Cliente)
+	 */
 	@Override
 	public void inclui(Cliente cliente) throws SQLException{
 		String sql = "";
@@ -40,6 +57,10 @@ public class ClienteDaoImpl implements ClienteDao {
 		st.close();
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#pesquisaPorCPF(br.com.softsite.domain.Cliente)
+	 */
 	@Override
 	public Cliente pesquisaPorCPF(Cliente cliente) throws SQLException {
 		Cliente entidadeRetorno = null;
@@ -67,6 +88,11 @@ public class ClienteDaoImpl implements ClienteDao {
 		return entidadeRetorno;
 	}
 
+	
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#altera(br.com.softsite.domain.Cliente)
+	 */
 	@Override
 	public void altera(Cliente cliente) throws SQLException {
 		String sql = "";
@@ -80,6 +106,10 @@ public class ClienteDaoImpl implements ClienteDao {
 		st.close();
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#listaTodos()
+	 */
 	@Override
 	public List<Cliente> listaTodos() throws SQLException {
 		Cliente clienteRetorno = null;
@@ -110,6 +140,10 @@ public class ClienteDaoImpl implements ClienteDao {
 		return listaClienteRetorno;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * @see br.com.softsite.dao.ClienteDao#exclui(br.com.softsite.domain.Cliente)
+	 */
 	@Override
 	public void exclui(Cliente cliente) throws SQLException {
 		String sql = "";

@@ -1,6 +1,13 @@
 package br.com.softsite.domain;
 
-
+/**
+ * Cliente.java
+ * 
+ * Classe de domínio que representa um Cliente.
+ *
+ * @author Nilo Jorge Andrade Barroso.
+ *
+ */
 public class Cliente {
 
 	private Integer idCliente;

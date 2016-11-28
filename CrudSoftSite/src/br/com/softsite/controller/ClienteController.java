@@ -19,6 +19,14 @@ import totalcross.ui.event.Event;
 import br.com.softsite.core.ClienteBusinessImpl;
 import br.com.softsite.domain.Cliente;
 
+
+/**
+ * ClienteController.java
+ * 
+ * Classe responsável por fazer a camada de visao e recepção das variáveis inseridas pelo usuário, no cadastro de Clientes.
+ * @author Nilo Jorge Andrade Barroso.
+ *
+ */
 public class ClienteController extends MainWindow{
 
 	private ClienteBusinessImpl clienteBusinessImpl;
